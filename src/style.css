@@ -1,4 +1,6 @@
-h1 {
-  color: magenta;
-  text-align: center;
+body {
+  color: rosybrown;
+}
+.weather-app {
+  border: 1px;
 }
