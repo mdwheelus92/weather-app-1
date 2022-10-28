@@ -2,5 +2,33 @@ body {
   color: rosybrown;
 }
 .weather-app {
-  border: 1px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #452e90;
+  border-radius: 5px;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  color: #594f87;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6d6882;
+}
+.date {
+  margin-top: 0;
+  padding: 0 20px 0 0;
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #6d6882;
+}
+.code-link {
+  color: #452e90;
 }
