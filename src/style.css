@@ -31,6 +31,8 @@ ul {
   display: inline;
   font-weight: 600;
   color: #6d6882;
+}
+li:first-letter {
   text-transform: capitalize;
 }
 .weather-temperature img {
