@@ -35,6 +35,9 @@ ul {
 li:first-letter {
   text-transform: capitalize;
 }
+.celcius {
+  color: #452e90;
+}
 .weather-temperature img {
   margin-right: 5px;
   float: left;
