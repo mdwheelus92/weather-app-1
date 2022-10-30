@@ -55,8 +55,13 @@ form {
 li:first-letter {
   text-transform: capitalize;
 }
-.celcius {
-  color: #452e90;
+.weather-temperature a {
+  text-decoration: none;
+  color: #a19bb8;
+}
+.weather-temperature .active {
+  color: black;
+  cursor: default;
 }
 .weather-temperature img {
   margin-right: 5px;

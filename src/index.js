@@ -28,6 +28,8 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
   let currentConditions = response.data.weather[0].icon;
 
+  farenheitTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -53,7 +55,32 @@ function submitHandle(event) {
   search(cityInputElement.value);
 }
 
+function showCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  farenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
+  let celciusTemp = ((farenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+function revert(event) {
+  event.preventDefault();
+  let FarenheitTemperatureElement = document.querySelector("#temperature");
+  celciusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+
+  FarenheitTemperatureElement.innerHTML = Math.round(farenheitTemperature);
+}
 search("Mammoth Lakes");
+
+let farenheitTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitHandle);
+
+let celciusLink = document.querySelector("#cel");
+celciusLink.addEventListener("click", showCelcius);
+
+let farenheitLink = document.querySelector("#default");
+farenheitLink.addEventListener("click", revert);

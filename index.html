@@ -21,14 +21,24 @@
         <div class="weather-app">
           <form id="search-form">
             <div class="row">
-              <div class="col-md-9"><input
-              type="search"
-              placeholder="Search Your City"
-              class="form-control"
-              id="city-input"
-              autocomplete="off"
-            /></div>
-            <div class="col-md-3"><input type="submit" placeholder="Search" class="form-control" id="button" /></div>
+              <div class="col-md-9">
+                <input
+                  type="search"
+                  placeholder="Search Your City"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-md-3">
+                <input
+                  type="submit"
+                  placeholder="Search"
+                  class="form-control"
+                  id="button"
+                />
+              </div>
+            </div>
           </form>
           <h1 id="city"></h1>
           <ul class="date">
@@ -45,8 +55,13 @@
                   width="100"
                   class="float-left"
                 /><strong id="temperature"></strong>
-                <span class="units"
-                  >°F | °<a href="#" class="celcius">C</a></span
+                <span class="units" id="f"
+                  ><a href="#" class="active" id="default">°F</a> |<a
+                    href="#"
+                    class="celcius"
+                    id="cel"
+                    >°C</a
+                  ></span
                 >
               </div>
             </div>
@@ -58,16 +73,15 @@
             </div>
           </div>
         </div>
-        </div>
-        <a
-          href="https://github.com/mdwheelus92/weather-app-1"
-          class="code-link"
-          target="_blank"
-        >
-          Open-Source Code
-        </a>
-        by Michelle Wheelus
       </div>
+      <a
+        href="https://github.com/mdwheelus92/weather-app-1"
+        class="code-link"
+        target="_blank"
+      >
+        Open-Source Code
+      </a>
+      by Michelle Wheelus
     </div>
     <script src="src/index.js"></script>
   </body>
