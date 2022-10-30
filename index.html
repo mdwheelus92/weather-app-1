@@ -19,6 +19,17 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-md-9"><input
+              type="search"
+              placeholder="Search Your City"
+              class="form-control"
+              id="city-input"
+              autocomplete="off"
+            /></div>
+            <div class="col-md-3"><input type="submit" placeholder="Search" class="form-control" id="button" /></div>
+          </form>
           <h1 id="city"></h1>
           <ul class="date">
             <li id="day"></li>
@@ -29,7 +40,7 @@
               <div class="d-flex weather-temperature">
                 <img
                   src=""
-                  alt="Clear"
+                  alt=""
                   id="icon"
                   width="100"
                   class="float-left"
@@ -46,6 +57,7 @@
               </ul>
             </div>
           </div>
+        </div>
         </div>
         <a
           href="https://github.com/mdwheelus92/weather-app-1"
