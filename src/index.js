@@ -16,6 +16,29 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day}, ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="http://openweathermap.org/img/wn/01d@2x.png"
+                  width="50"
+                />
+                <div class="weather-forecast-temp">
+                  <span class="weather-forecast-temp-high">18° </span
+                  ><span class="weather-forecast-temp-low">12°</span>
+                </div>
+              `;
+    forecastHTML = forecastHTML + "</div>";
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -27,6 +50,8 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#day");
   let iconElement = document.querySelector("#icon");
   let currentConditions = response.data.weather[0].icon;
+
+  displayForecast();
 
   farenheitTemperature = response.data.main.temp;
 
