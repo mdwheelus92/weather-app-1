@@ -1,5 +1,5 @@
 h1 {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 100;
   color: #594f87;
   margin-bottom: 0;
@@ -31,17 +31,18 @@ form {
   font-family: Arial, Helvetica, sans-serif;
 }
 .weather-app {
-  background-color: #f0eefb;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #452e90;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 1px 1px 1px 0px;
   box-shadow: #594f87;
 }
 .weather-app-wrapper {
-  max-width: 600px;
+  font-size: 14px;
+  max-width: 580px;
   margin: 30px auto;
   padding: 0;
 }
